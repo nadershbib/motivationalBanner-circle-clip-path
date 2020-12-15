@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.arrow-icon{
+    position: absolute;
+    right: 40px;
+    width: 100px;
+    height: 90px;
+    top: 65px;
+    fill: darkslategrey;
+    animation: scale 1s ease-in-out infinite;
+
+}
+
+@keyframes scale {
+     0%{
+         transform: scale(1);
+     }
+
+     50%{
+         transform: scale(1.2);
+     }
+}
+
+@media(max-width:600px){
+    .arrow-icon{
+    right: 15px !important;
+    height: 71px !important;
+    top: 36px !important;
+    fill: darkslategrey;
+    }
+
+    .box h1{
+        font-size: 2.5rem !important;
+    }
+}
+
+.box{
+   
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('https://w.wallhaven.cc/full/rd/wallhaven-rd7drw.jpg')center/ cover no-repeat fixed;
+    clip-path: circle(5.9% at 100% 0);
+    transition: all 1.5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.box h1{
+   font-size: 4.7rem;
+   font-family:'Raleway', sans-serif;
+   font-weight: 200;
+   color: #fff;
+}
+
+.box:hover{
+    clip-path: circle(141.4% at 100% 0);
+}
+
+.box:hover + .arrow-icon {
+    display: none;
+}
+
+
